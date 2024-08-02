@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { home, mail } from 'ionicons/icons';
+import { home, logOut } from 'ionicons/icons';
 import { register } from 'swiper/element/bundle'; 
 
 register();
@@ -18,9 +18,9 @@ register();
 export class AppComponent {
   public menuPages = [
     { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Inbox', url: '/home', icon: 'mail' },
+    { title: 'Sair', url: '/login', icon: 'log-out' },
   ];
   constructor() {
-    addIcons({ home, mail });
+    addIcons({ home, logOut });
   }
 }

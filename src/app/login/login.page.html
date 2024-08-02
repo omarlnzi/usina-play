@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+</ion-header>
+
+<ion-content>
+  <div class="full login-container">
+    <ion-card>
+      <ion-card-header class="">
+        <ion-img src="assets/img/usina-logo.png"></ion-img>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <ion-list>
+            <ion-item>
+              <ion-input
+                type="email"
+                label="Email"
+                labelPlacement="floating"
+                formControlName="email"
+                placeholder="email@domain.com"
+              >
+                <ion-icon
+                  slot="start"
+                  name="mail-outline"
+                  aria-hidden="true"
+                ></ion-icon>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input
+                type="password"
+                label="Senha"
+                labelPlacement="floating"
+                formControlName="password"
+                placeholder="**************"
+              >
+                <ion-icon slot="start" name="lock-closed"></ion-icon>
+              </ion-input>
+            </ion-item>
+          </ion-list>
+
+          <div class="button-container">
+            <ion-button
+              shape="round"
+              type="submit"
+              fill="solid"
+              [disabled]="!loginForm.valid"
+              >Login</ion-button>
+          </div>
+        
+        <div class="register-container">
+          <span>Não tem uma conta?</span>
+          <button class="ion-no-padding" (click)="signUp()">Registrar</button>
+        </div>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

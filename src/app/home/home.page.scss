@@ -1,16 +1,13 @@
 ion-toolbar {
     padding-right: 5px;
-    // border:2px solid white;
 }
-  
+
+ion-row {
+    padding-bottom: 0;
+}
 
 .logo {
-    // content: url("public/assets/img/usina-logo.png");
-    // width: 40%;
     height: 3vh;
-    // padding: 10px 0;
-    // padding: 8dvh 0;
-    // border:1px solid white;
 }
 
 .notifications-badge {
@@ -18,7 +15,6 @@ ion-toolbar {
     padding: 3px;
     right: -5px;
     top: -4px;
-    // font-size: 0.7em;
     border-radius: 51%;
     z-index: 1;
     --color: #7df0d3;
@@ -34,16 +30,8 @@ ion-toolbar {
 }
 
 .profile-toolbar {
-    // padding: 0;
-    // justify-content: center;
-    //    height: 100px;
     padding: 0 30px;
     border-radius: 0 0 50px 50px;
-
-    // overflow: hidden;
-    // ion-item{
-    //     height: 100%;
-    // }
     .item-avatar {
         ion-avatar {
             // border-right: 20px;
@@ -59,7 +47,6 @@ ion-toolbar {
 
         ion-label h2 {
             color: white;
-            // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: bold;
             font-size: 15px;
         }
@@ -71,20 +58,11 @@ ion-toolbar {
     }
 
     .item-chips {
-        // display: flex !important; 
-        // justify-content: end !important;
-        // align-content: end !important;
-        // align-items: end !important;
-        // width: 50%;
         padding-left: 10px;
 
         ion-label {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            // white-space: nowrap; 
-            // overflow: hidden;
-            // text-overflow: ellipsis;
             font-size: 10px;
-            // text-wrap-mode: nowrap;
         }
 
         ion-icon {
@@ -119,11 +97,76 @@ ion-toolbar {
 }
 
 .swiper {
-    width: auto;
+
+    ion-card {
+
+        border-radius: 8%;
+
+    }
+}
+
+.card-img {
+    display: flex;
+    flex-direction: column-reverse;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    height: 18vh;
+
+    .card-title {
+        position: relative;
+        padding: 4px 10px;
+        font-size: 18px;
+        font-weight: Bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .new-button {
+        --ripple-color: transparent;
+        --background-activated: transparent;
+        color: white;
+
+        ion-icon {
+            margin: 0;
+            color: white;
+            font-size: 64px;
+        }
+
+        text-transform: uppercase;
+    }
 
 }
 
+.new-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
-// .avatar-image {
-//     content: url("https://randomuser.me/api/portraits/med/men/44.jpg");
-// }
+}
+
+.new-card::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+.program-badge{
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 8px;
+    font-size: 1px;
+    border-radius: 15px;
+}
+
+.card-subtitle{
+    padding-left: 10px;
+    font-weight: Bold;
+}
