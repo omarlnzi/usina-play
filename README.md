@@ -17,3 +17,4 @@
 - Descompactar .zip
 - Executar `cd usaina-play & npm i`
 - Executar `ionic capacitor run android --external`
+- Usuario teste `leo@mail.com` senha `123456`
